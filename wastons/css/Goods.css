@@ -1,0 +1,123 @@
+/*头部样式*/
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: 0;}
+
+
+/*top部分*/
+.top_1_out{height: 35px; background: #F7F7F7;}
+.top_1_out .top_1{width: 1061px; margin: auto;}
+.top_1_out .top_1 h4{line-height: 35px;}
+
+
+.top_2_out{height: 38xp;}
+.top_2_out .top_2{height: 38px; width: 1060px; margin: auto;}
+.top_2 a{font-size: 12px; line-height: 38px; color: #009DA8;}
+.top_2_left{float: left;}
+.top_2_left a{margin-right: 15px;}
+.top_2_right{float: right;}
+.top_2_right a{margin-left:15px ;}
+
+.top_3_out{height: 120px; background: #F7F7F7;}
+.top_3_out .top_3{width: 1060px; height: 120px; margin: auto;}
+.top_3_img{width: 306px;height: 120px; float: left;}
+.top_3_img img{ margin-top: 33px;}
+.top_3_search{width: 478px; height: 120px; float: left;}
+#search{width: 310px; height: 30px; border: 1px solid #009DA8; margin-top: 45px; float: left;}
+.top_3_search span{width: 32px; height: 32px; background: #009DA8; float: left; margin-top: 45px;}
+.top_3_search span img{padding: 5px;}
+.top_3_pic{width: 276px; height: 120px; float: left; background: url(../img_goods/top_3_pic.png) no-repeat center;}
+
+/*导航栏*/
+.nav{height: 45px; background: #009DA8;}
+.nav_in{height: 45px; width: 1060px; margin: auto;}
+.nav_in ul li{float: left; padding: 0 24px;}
+.nav_in ul a{color: white; text-align: center; line-height: 45px;}
+.nav_in ul li:hover{background: black;}
+.nav_in ul #No_1{background: #008888;}
+
+/*侧边栏*/
+.sidebar{width: 40px; height: 100%; background: darkblue; opacity: 0.5; position: fixed;top: 0; bottom: 0; right: 0;z-index: 2;}
+
+
+
+
+/*商品列表区*/
+.content{height: 2220px; background: #F7F7F7;}
+.content_in{height: 2220px; width: 1058px; border: 1px solid black; margin: auto;}
+.content_in .brand{height: 160px; width: 1060px; background: burlywood;}
+.content_in .goods_list{width: 1060px; height: 1930px;}
+.single{height: 365px;margin: 0 7px 20px;width: 245px; float: left;}
+.single .float{width: 255px; height: 255px; border: 1px solid gainsboro; }
+.single img{width: 245px; height: 245px; padding: 5px;}
+.single a{color: black; font-size: 13px;}
+.single a:hover{color: #FF1270; border-bottom: 1px solid #FF1270;}
+.single span{float: right;margin-left: 50px;}
+.single .cost{text-decoration: line-through;}
+.single .collect{cursor: pointer;}
+.single .collect:hover{color: #FF1270;}
+.single .price{line-height: 40px; color: #FF1270; font-size: 20px;}
+.single p{color: gray; font-size: 12px;}
+
+
+/*foot部分*/
+.foot{height: 393px; background: #545454;}
+.foot_in{height: 393px; width: 1060px; margin: auto;}
+.foot_in .foot_pic{height: 160px; width: 1060px; border-bottom: 1px solid white;}
+.foot_in .foot_pic img{margin-top: 20px;}
+
+
+.foot_text .div1{width: 310px; height: 185px; background: url(../img_goods/logo-global-reverse.png) no-repeat center left;}
+.foot_text .div2,.div3,.div4{width: 229px;height: 185px; padding-left: 20px; border-left: 1px solid white;}
+.foot_text ul li{margin: 15px 0;}
+.foot_text ul li a{color: white; font-size: 14px;}
+.foot_text ul li a:hover{color: #008888;}
+.foot_text .div1,.div2,.div3,.div4{float: left; margin-top: 30px;}
+.foot_text h3{color: yellow;}
+
+/*end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

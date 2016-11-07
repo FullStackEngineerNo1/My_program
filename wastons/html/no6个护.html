@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个护</title>
+		<script type="text/javascript">
+			var obj = {
+				title:"沐浴",
+				child:[{
+					title:"沐浴露"
+				},{
+					title:"磨砂浴盐"
+				},{
+					title:"止汗香体"
+				}]
+			}
+			var obj1 = {
+				title:"女性护理",
+				child:[{
+					title:"卫生巾/棉条"
+				},{
+					title:"护垫"
+				},{
+					title:"护理液"
+				}]
+			}
+			var obj2 ={
+				title:"空腔护理",
+				child:[{
+					title:"牙刷"
+				},{
+					title:"牙膏"
+				},{
+					title:"漱口水"
+				},{
+					title:'特别护理'
+				}]
+			}
+			var obj3 = {
+				title:"洗护用品"
+			}
+			var obj4 = {
+				title:"纸品/棉"
+			}
+			var arr = [obj, obj1, obj2, obj4];
+			var str = JSON.stringify(arr);
+			document.write(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
