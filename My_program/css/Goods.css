@@ -45,12 +45,13 @@ img{border: 0;}
 
 /*商品列表区*/
 .content{height: 2220px; background: #F7F7F7;}
-.content_in{height: 2220px; width: 1058px; border: 1px solid black; margin: auto;}
+.content_in{height: 2220px; width: 1060px; margin: auto;}
 .content_in .brand{height: 160px; width: 1060px; background: burlywood;}
 .content_in .goods_list{width: 1060px; height: 1930px;}
 .single{height: 365px;margin: 0 7px 20px;width: 245px; float: left;}
-.single .float{width: 255px; height: 255px; border: 1px solid gainsboro; }
-.single img{width: 245px; height: 245px; padding: 5px;}
+.single .float{width: 255px; height: 255px; border: 1px solid gainsboro; overflow: hidden;}
+.single .float .rush{width: 255px; height: 50px;background: #008888;color: white; position: relative;top:-4px; text-align: center;line-height: 50px;}
+.single img{width: 245px; height: 245px; padding: 5px; cursor: pointer;}
 .single a{color: black; font-size: 13px;}
 .single a:hover{color: #FF1270; border-bottom: 1px solid #FF1270;}
 .single span{float: right;margin-left: 50px;}

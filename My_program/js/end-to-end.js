@@ -17,10 +17,14 @@ $(function(){
 				
 		/*我的账户弹出	*/	
 			$(".login_p").find("#Myid").hover(function(){
-				$(".enter").css("display", "block");
-			},function(){
-				$(".enter").css("display", "none");
-			})	
+					$(".enter").css("display", "block");
+				})
+		
+				$(".enter").hover(function(){
+					$(".enter").css("display", "block");
+				  },function(){
+				   	$(".enter").css("display", "none");				  	
+				  } )
 				
 })
 

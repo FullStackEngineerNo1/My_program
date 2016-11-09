@@ -1,0 +1,27 @@
+/*头部样式*/
+*{ margin: 0; padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+img { border: none; }
+
+
+.my_goods{width: 980px; height: 225px; border: 1px solid black; margin: auto; margin-top: 155px; position: relative;}
+
+
+		/*发货流程*/
+.step{height: 80px; width: 980px;}
+.step div{float: left;width: 245px; height: 80px;}
+.step div span{margin-left: 100px; width: 20px; height: 20px; border-radius: 20px; background: #008888;color: white;display: inline-block;text-align: center; margin-top: 30px;}
+
+.my_goods .goodstitle{margin-left: 50px;}
+
+.my_goods #goods_show{width: 980px; margin: auto; height: 60px;}
+
+
+/*未购物提示*/
+.prompt{margin-left: 50px; font-size: 12px; }
+.prompt a{color: black; border-bottom: 1px solid black;}
+.prompt a:hover{color: #008888; border-bottom: 0;}
+
+
+

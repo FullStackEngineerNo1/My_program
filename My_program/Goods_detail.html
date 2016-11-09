@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<script type = "text/javascript" src = "js/MQuery.js"></script>	
+		<script type = "text/javascript" src = "js/MQuery_animate.js"></script>
+		<script type = "text/javascript" src = "js/perfect_startMove.js"></script>
+		<script type = "text/javascript" src = "js/jquery-1.11.3.js"></script>
+		<!--<script type = "text/javascript" src = "js/Goods_data.js"></script>-->
+		<!--<script type = "text/javascript" src = "js/Goods.js"></script>-->
+		<!--<script type = "text/javascript" src = "js/end-to-end.js"></script>-->
+		<!--<link rel="stylesheet" type="text/css" href="css/end-to-end.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/Goods_detail.css"/>
+		<script type="text/javascript">
+window.onload=function(){
+			/*放大镜*/
+		var oS_box=document.getElementById('s_box');
+		var oS_position=oS_box.children[2];
+		var oS_mark=oS_box.children[0];
+		var oB_box=document.getElementById('b_box');
+		var oB_box_all=document.getElementById('b_box_all')
+		oS_mark.onmouseover=function(){
+			oS_position.style.display='block';
+			oB_box.style.display='block';
+
+		}
+		oS_mark.onmouseout=function(){
+			oS_position.style.display='none';
+			oB_box.style.display='none';
+		}
+
+		oS_mark.onmousemove=function(event){
+			var evt=event||window.event;
+
+			var left=evt.offsetX-oS_position.offsetWidth/2;
+			//console.log(left)
+			
+			if(left<0){
+				left=0;
+			}else if(left>oS_box.offsetWidth-oS_position.offsetWidth){
+				left=oS_box.offsetWidth-oS_position.offsetWidth
+			}
+			//console.log(left)
+			oS_position.style.left=left+'px';
+
+
+			var top=evt.offsetY-oS_position.offsetHeight/2;
+			if(top<0){
+				top=0;
+			}else if(top>oS_box.offsetHeight-oS_position.offsetHeight){
+				top=oS_box.offsetHeight-oS_position.offsetHeight
+			}
+			//console.log(top)
+			oS_position.style.top=top+'px';
+
+			//移动的比例  把X值和Y值换算成比例;
+
+			var proportionX=left/(oS_box.offsetWidth-oS_position.offsetWidth);
+			var proportionY=top/(oS_box.offsetHeight-oS_position.offsetHeight);
+
+//			console.log(proportionX+':'+proportionY)
+
+			//利用比例去算出大小不同的元素的偏移距离；
+
+			oB_box_all.style.left=-proportionX*(oB_box_all.offsetWidth-oB_box.offsetWidth)+'px';
+
+			oB_box_all.style.top=-proportionY*(oB_box_all.offsetHeight-oB_box.offsetHeight)+'px';
+
+		}
+
+
+		
+	}
+		</script>
+	</head>
+	<body>
+									<!--top部分-->
+		<!--top_1部分-->
+		<div class = "top_1_out">
+			<div class = "top_1">
+				<h4>全程包邮 若在购物流浪的过程中需要帮助，请联系客服</h4>
+			</div>	
+		</div>
+		
+		<!--top_2部分-->
+		<div class = "top_2_out">
+			<div class = "top_2">
+				<div class="top_2_left">
+					<a href="">欢迎光临屈臣氏</a>
+					<a href="login.html">请登录</a>
+					<a href="">免费注册</a>
+				</div>
+				<div class = "top_2_right">
+					<a href="shopcar.html">购物车<span>(0)</span></a>
+					<a href="">个人中心</a>
+					<a href="">联系我们</a>
+					<a href="">收藏本站</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--top_3部分-->
+		<div class = "top_3_out">
+			<div class = "top_3">
+				<div class="top_3_img">
+					<a href="index1.html"><img src="img_goods/logo-global.png"/></a>
+				</div>
+			<!--	搜索框-->
+				<div class = "top_3_search">
+					<p>
+						<input type="text" id="search" value="" placeholder="请输入商品名称或你需要的关键词" />
+						<span>
+							<img src="img_goods/goods_pic__03.png"/>
+						</span>
+					</p>
+				</div>
+				
+				<div class = "top_3_pic">
+					
+				</div>
+			</div>
+		</div>
+	
+		<!--导航栏-->
+		<div class = "nav">
+			<div class = "nav_in">
+				<ul>
+					<a href="">
+						<li id="No_1">所有商品分类</li>
+					</a>
+					<a href="">
+						<li>爆款专区</li>
+					</a>
+					<a href="">
+						<li>立减优惠</li>
+					</a>
+					<a href="">
+						<li>精彩热卖</li>
+					</a>
+					<a href="">
+						<li>护发</li>
+					</a>
+					<a href="">
+						<li>护肤</li>
+					</a>
+					<a href="">
+						<li>个护</li>
+					</a>
+					<a href="">
+						<li>美体健康</li>
+					</a>
+					<a href="">
+						<li>母婴天地</li>
+					</a>
+					<a href="">
+						<li>家居精品</li>
+					</a>
+				</ul>
+			</div>
+		</div>
+	
+		<!--侧边栏-->
+		<div class = "sidebar">
+			<span>
+				
+			</span>
+			<span>
+				购物车
+			</span>
+			<span>
+				
+			</span>
+		</div>
+		
+		<!--商品详情部分-->
+		<!--详情上半部分-->
+		<div class = "detail">
+			<div class="detail_in">
+				<div class="detail_in_top">
+					<div class="top_title">
+						<p class="wastons_titiel"><a href="Goods.html">屈臣氏全球购</a>    /    【两件价】Maplelife美柏莱纯天然亚麻籽油软胶囊100粒*2
+</p>
+					<div class="pic_big">
+					
+						<div id="s_box">
+							<div class="mark_box"></div>
+							<img src="img/0464f5d699eb4c979c29311f136cb062.jpg" alt="">
+							<div class='position_box'></div>
+						</div>
+						<div id="b_box">		
+							<div id="b_box_all">
+								<img src="img/0464f5d699eb4c979c29311f136cb062.jpg" alt="">
+							</div>		
+						</div>	
+						<div id="litile_pic" style="width: 450px; height: 60px; margin-top: 25px;z-index: 15;">
+							<span style="height: 60px; width: 28px; border: 1px solid gray; float: left;font-size: 40px; text-align: center;"><</span>
+								<img style="width: 57px;height: 57px;border: 2px solid red; margin-left: 15px;" src="img/0464f5d699eb4c979c29311f136cb062.jpg"/>
+								<span style="height: 60px; width: 28px; border: 1px solid gray; float: right;font-size: 40px; text-align: center;">></span>
+								<div>编号T4350<span style="float: right;">♥收藏</span></div>
+						</div>
+						
+						<div class="pic_big_right">
+							<div class="explain1">
+								<div style="line-height: 50px; font-size: 14px; margin: 15px 0 0 15px;">
+									<p><img src="img/CA.png"/>
+									加拿大直采 杭州保税仓发货</p>
+								</div>
+								<div style="font-size: 18px;">
+									【两件价】Maplelife美柏莱纯天然亚麻籽油软胶囊100粒*2
+								</div>
+							</div>
+							
+							
+							<div class="explain2">
+								<div class="explain2_left">
+									<p style="margin-top: 30px;">价格<span style="color: red; font-size: 30px; margin-right: 30px;">￥219.00</span></p>
+									<p>国内参考价<span style="font-size: 18px; text-decoration: line-through; margin: 0 20px; color: black;">318.00</span>省99.00</p>
+									<p>应征综合税<span style="font-size: 16px; margin-left: 15px; color: black;">26.06</span></p>
+									<p>库存<span style="font-size: 16px; margin-left: 15px;">48</span></p>
+									<p>规格<span style="color: red; margin-left: 15px;">×1</span></p>
+									<p>包邮<span style="margin-left: 15px; color: black; font-size: 16px;">是</span></p>
+								</div>
+								<div class="explain2_right">
+									<span style="margin: 20px;">关税说明﹀</span>
+								</div>
+							</div>
+							
+							
+							<div class="explain3">
+								<div>
+									<p style="line-height: 30px;color: gray;display: inline-block; ">
+										<span style="display: block;border: none;margin-right: 20px;">我要数量</span>
+										<!--<span style="display: block;">-->
+											<span style="display: block; width: 30px;">-</span>
+										<span style="display: block;width: 60px;">2</span>
+										<span style="display: block; width: 30px;">+</span>
+										<!--</span>-->
+										
+										<select style="width: 90px; height: 33px; margin-top: 15px; margin-left: 15px;color: #008888;">
+											<option>组</option>
+										</select>									
+									</p>									
+								</div>
+								
+								<div>
+									<input type="button" id="buy" value="立即购买" />
+									<input type="button" id="addshopcar" value="加入购物车" />
+								</div>
+									
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				
+		<!--详情下半部分	-->
+				<div class="detail_in_low">
+					<div class="title">
+						商品详情
+					</div>
+					<div class="number">
+						<span class="span1">商品编码： T4350</span>
+						<span class="span2">原产地： 加拿大</span>
+						<span class="span2">包装重量： 0.33kg</span>
+					</div>
+					
+					<img class="detail_in_lowp1" src="img/coupon.jpg"  />
+					<img class="detail_in_lowp2" src="img/detail_img.jpg"/>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+				<!--foot部分-->
+		<div class = "foot">
+			<div class = "foot_in">
+				<div class = "foot_pic">
+					<img src="img_goods/insurance-more.png"/>
+				</div>
+				<div class = "foot_text">
+					<div class = "div1">
+						
+					</div>
+					<div class = "div2">
+						<h3>购物指南</h3>
+						<ul>
+							<li><a href="">购物流程</a></li>
+							<li><a href="">征税说明</a></li>
+							<li><a href="">支付方式</a></li>
+						</ul>
+					</div>
+					<div class = "div3">
+						<h3>物流配送</h3>
+						<ul>
+							<li><a href="">配送说明</a></li>
+							<li><a href="">物流跟踪</a></li>
+						</ul>
+					</div>
+					<div class = "div3">
+						<h3>售后服务</h3>
+						<ul>
+							<li><a href="">退换货总则</a></li>
+							<li><a href="">联系我们</a></li>
+							<li><a href="">隐私政策</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+		<!--end-->
+		<div class = "end">
+			站长统计
+		</div>
+	</body>
+</html>

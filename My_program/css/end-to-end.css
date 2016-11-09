@@ -23,10 +23,11 @@ img { border: none; }
 
 /*搜索框*/
 .top1 .search{float: left; width: 313px; height: 80px;}
-.top1 .search input{width: 230px; height: 30px; border: 1px solid #009DA8; border-radius: 10%; margin-left: 52px; margin-top: 27px;padding-left: 15px;}
+.top1 .search input{width: 230px; height: 30px; border: 1px solid #009DA8; border-radius: 30px; margin-left: 52px; margin-top: 27px;padding-left: 15px;}
 
 /*注册登入*/
 .top1 .login{float: left; background: url(../img/login.jpg) no-repeat left center;  width: 178px; height: 80px;}
+.top1 .login .link{color: black;}
 .top1 .login .login_p{padding: 28px 0 0 40px; font-size: 10px;}
 #Myid:hover{color: gray; cursor: pointer;}
 
@@ -42,7 +43,8 @@ img { border: none; }
 /*购物篮*/
 .top1 .shoppingcar{float: left; background: url(../images/spritesheet_15.jpg) no-repeat left center;  width: 153px; height: 80px;}
 .top1 .shoppingcar .shopcarinner{padding: 28px 0 0 48px; font-size: 10px; position: absolute;}
-#shop:hover{color: gray;}
+#shop{color: black;}
+#shop:hover{color: gray; cursor: pointer;}
 #num{ position: absolute; top: 35px; left: 13px; font-size: 14px; color: white; width: 30px; height: 22px; text-align: center;line-height: 22px;}
 
 /*导航栏*/

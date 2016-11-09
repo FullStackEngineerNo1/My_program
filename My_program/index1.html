@@ -56,12 +56,17 @@
 				}
 				
 		/*我的账户弹出	*/	
-			$(".login_p").find("#Myid").hover(function(){
-				$(".enter").css("display", "block");
-			},function(){
-				$(".enter").css("display", "none");
-			})	
-				
+	
+				$(".login_p").find("#Myid").hover(function(){
+					$(".enter").css("display", "block");
+				})
+				$(".enter").hover(function(){
+					$(".enter").css("display", "block");
+				  },function(){
+				   	$(".enter").css("display", "none");				  	
+				  } )
+
+
 				
 				
 				
@@ -123,6 +128,91 @@
 		/*小轮播图*/
 	$(function(){	
 		/*左右箭头划上划下变化事件*/
+		
+//		 您给对方发送了一个闪屏振动。
+
+    var $prev=$(".little_1");
+    var $next=$(".little_2");
+    var $list=$("#ball");
+    var $picLi=$("#ball li");
+//  var $footChangeImge=$(".footChangeImge");
+
+    var iNow=0;
+    var iW=$picLi.outerWidth(true);
+    var len=$picLi.length;
+    //console.log(len)
+    var timer=null;
+    var animated=true;
+
+	var ball = document.getElementById('ball');
+	ball.innerHTML += ball.innerHTML;
+//   $picLi.eq(0).clone().appendTo($list);        
+//   $picLi.eq(1).clone().appendTo($list);
+//   $picLi.eq(2).clone().appendTo($list);
+//   $picLi.eq(3).clone().appendTo($list);
+//   $picLi.eq(4).clone().appendTo($list);
+//   $picLi.eq(5).clone().appendTo($list);
+//   $picLi.eq(6).clone().appendTo($list);
+//   $picLi.eq(7).clone().appendTo($list);
+////   $picLi.eq(5).clone().appendTo($list);
+
+/*    timer=setInterval(autoPlay,3000)
+
+    
+    $footChangeImge.hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer=setInterval(autoPlay,3000)
+    })
+*/
+   //上一张
+   $prev.click(function(){
+        /*if(!animated){
+            return
+        }*/
+        if(iNow<=0){
+            iNow=len;
+            $list.css({"left":-iNow*iW})
+        }
+        iNow--;
+        changeView()
+   })
+    //下一张
+    $next.click(function(){
+        /*if(!animated){
+            return
+        }*/
+        if(iNow>=len){
+            iNow=0;
+            $list.css({"left":0})
+        }
+        iNow++;
+        changeView()
+   })
+
+
+   function changeView(){
+//      animated=false;
+        $list.stop().animate({"left":-iNow*iW},function(){
+//          animated=true;
+            if(iNow>=len){
+                $list.css('left','0px');
+            }
+        })
+   }
+   function autoPlay(){
+       if(iNow>=len){
+           iNow=0;
+           $list.css({"left":0})
+       }
+       iNow++;
+       changeView()
+  }
+
+		
+		
+		
+		
 		$(".little_1").hover(
 			function () {
 				$(this).find('img').attr("src", "img2/spritesheet2.png")},
@@ -138,12 +228,14 @@
 				$(this).find('img').attr("src", "img2/spritesheet3.png")
 			}
 		);
-		/*点击左侧按钮*/
+/*		点击左侧按钮
+		var ball = document.getElementById("ball");
+		ball.innerHTML  += ball.innerHTML;
 		var index=0;
 		$(".little_1").click(function(){
 			index++;
 			$(".little_md ul" ).animate({left: -112*index}, function(){
-					if(index == 19){
+					if(index == 12){
 //						alert(1)
 						index = 0;
 						$(".little_md ul" ).css("left", 0);
@@ -151,64 +243,23 @@
 		})
 			})
 		/*点击右侧按钮*/
-		$(".little_2").click(function(){
+		/*$(".little_2").click(function(){
+			
 			index--;
-			$(".little_md ul" ).animate({left: -112*index})
-		})		
+			$(".little_md ul" ).animate({left: -112*index}, function(){
+					/*if(index == 0){
+//						alert(1)
+						index = 12;
+						$(".little_md ul" ).css("left",-112*12 );
+					})
+		})	*/	
 				
 				
 	})
 		
 		</script>
 		<script type="text/javascript">
-		/*无缝滚动*/
-//			window.onload = function(){
-/*			var oDiv = document.getElementById("div1");
-			var oUl = oDiv.getElementsByTagName("ul")[0];
-			var aLi = oUl.getElementsByTagName("li");
-			//找到button
-			var aButtons = document.getElementsByTagName("a");
 
-			oUl.innerHTML += oUl.innerHTML;
-			//重设oUl的宽度
-			oUl.style.width = aLi.length * aLi[0].offsetWidth + "px";
-			var time = null;
-			var speed = 2;
-			aButtons[0].onclick = function(){
-				// speed = -2;
-				aLi.style.left - 120px;
-			}
-			aButtons[1].onclick = function(){
-				// speed = 2;
-			}
-			clearInterval(time);*/
-			/*timer = setInterval(function(){
-				if(oUl.offsetLeft < -oUl.offsetWidth / 2){
-					oUl.style.left = 0;
-				}else if(oUl.offsetLeft > 0){
-					oUl.style.left = -oUl.offsetWidth / 2 + "px";
-				}
-				oUl.style.left = oUl.offsetLeft + speed + "px";
-			},  1000);*/
-//		}
-		
-		
-		
-		
-/*		function tab(){
-				aBtn.attr("className", "");
-				aBtn.eq(iNow).attr("className", "active");
-				if(iNow == aLi.size() - 1){
-					aBtn.eq().attr("className", "active");
-				}
-
-				oUl.animate({top: -150 * iNow}, function(){
-					if(iNow == aLi.size() - 1){
-						iNow = 0;
-						oUl.css("top", 0);
-					}
-				})
-			}*/
 			
 			/*选项卡*/
 		$(function(){
@@ -303,14 +354,14 @@
 				<div class = "login">
 					<div class = "login_p">
 						<p>你好，请登入</p>
-						<p id = "Myid" style = "font-weight: bolder;">我的账户  ﹀</p>
+						<a href="login.html" class="link"><p id = "Myid" style = "font-weight: bolder;">我的账户  ﹀</p></a>
 					</div>
 					
 					<div class="enter">
 						<div class="enter_box">
 							
 						<input type="button" id="" class ="btn" value="登入" />
-						<p>第一次登入？<a href="">请点此</a></p>
+						<p>第一次登入？<a href="login.html">请点此</a></p>
 						<ul>
 							<li><a href="">我的账户</a></li>
 							<li><a href="">我的订单</a></li>
@@ -331,7 +382,7 @@
 						<span id = "total">
 						￥0.00
 						</span>
-						<p id = "shop" style = "font-weight: bolder;">购 物 篮</p>
+						<a href="shopcar.html" id = "shop" style = "font-weight: bolder; display: block;">购 物 篮</a>
 					</div>					
 				</div>
 			</div>
@@ -342,13 +393,9 @@
 			<div class = "naver">
 				<ul>
 					<a href = "#" class="nav_a"><li>最新优惠<div class = "popup"></div></li></a>
-					<a href = "#" class="nav_a">
+					<a href = "Goods.html" class="nav_a">
 						<li>全球购<div class = "popup">
-							<!--<div id = "turn_right">
-							<span class = "navtou">流行趋势</span>
-							<span><img src="img/ivory.jpg"/></span>
-							<span><img src="img/crest.jpg"/></span>								
-							</div>-->
+							
 						</div></li></a>
 					<a href = "#" class="nav_a out"><li>潮品购<div class = "popup"></div></li></a>
 					<a href = "#" class="nav_a"><li>包邮区</li></a>
@@ -428,8 +475,8 @@
 			<div class = "little_1">
 				<img src="img2/spritesheet1.png" alt="">
 			</div>
-			<div class = "little_md">
-				<ul>
+			<div class = "little_md" >
+				<ul id="ball">
 					<li><img src = "img2/1.jpg"></li>
 					<li><img src = "img2/2.jpg"></li>
 					<li><img src = "img2/3.jpg"></li>
@@ -442,14 +489,6 @@
 					<li><img src = "img2/10.jpg"></li>
 					<li><img src = "img2/11.jpg"></li>
 					<li><img src = "img2/12.jpg"></li>
-					<li><img src = "img2/1.jpg"></li>
-					<li><img src = "img2/2.jpg"></li>
-					<li><img src = "img2/3.jpg"></li>
-					<li><img src = "img2/4.jpg"></li>
-					<li><img src = "img2/5.jpg"></li>
-					<li><img src = "img2/6.jpg"></li>
-					<li><img src = "img2/7.jpg"></li>
-					<li><img src = "img2/8.jpg"></li>
 				</ul>
 			</div>			
 			
